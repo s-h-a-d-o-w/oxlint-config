@@ -1,3 +1,6 @@
+Not ready for use yet because extend behavior is not thoroughly documented. See also: https://github.com/oxc-project/oxc/discussions/20126#discussioncomment-16233538
+
+
 [![npm version](https://img.shields.io/npm/v/@s-h-a-d-o-w/oxlint-config)](https://www.npmjs.com/package/@s-h-a-d-o-w/oxlint-config)
 
 # @s-h-a-d-o-w/oxlint-config
