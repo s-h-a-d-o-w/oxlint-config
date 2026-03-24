@@ -19,10 +19,9 @@
     "pedantic": "error",
     "perf": "error",
     "restriction": "error",
-    "suspicious": "error"
+    "suspicious": "error",
+    "style": "error"
   },
-  // MERGED
-  // =========================================
   // See: https://oxc.rs/docs/guide/usage/linter/plugins.html#supported-plugins
   "plugins": [
     "eslint",
@@ -37,11 +36,50 @@
     "promise",
     "vitest"
   ],
+  // MERGED
+  // =========================================
   "rules": {
     // Configuring rules
     "typescript/no-misused-promises": ["error", { "checksVoidReturn": false }],
 
     // Disabling rules
+    // style
+    "eslint/func-style": "off",
+    "eslint/id-length": "off",
+    "eslint/init-declarations": "off",
+    "eslint/max-statements": "off",
+    "eslint/new-cap": "off",
+    "eslint/no-continue": "off",
+    "eslint/no-magic-numbers": "off",
+    "eslint/no-nested-ternary": "off",
+    "eslint/no-ternary": "off",
+    "eslint/prefer-template": "off",
+    "eslint/sort-imports": "off",
+    "eslint/sort-keys": "off",
+    "import/consistent-type-specifier-style": "off",
+    "import/exports-last": "off",
+    "import/group-exports": "off",
+    "import/no-anonymous-default-export": "off",
+    "import/no-named-export": "off",
+    "import/no-nodejs-modules": "off",
+    "import/prefer-default-export": "off",
+    "jest/max-expects": "off",
+    "jest/no-hooks": "off",
+    "jest/require-hook": "off",
+    "promise/avoid-new": "off",
+    "promise/prefer-await-to-callbacks": "off",
+    "promise/prefer-await-to-then": "off",
+    "react/jsx-max-depth": "off",
+    "react/jsx-props-no-spreading": "off",
+    "typescript/consistent-type-imports": "off",
+    "unicorn/error-message": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/no-await-expression-member": "off",
+    "unicorn/no-nested-ternary": "off",
+    "unicorn/prefer-global-this": "off",
+    "vitest/consistent-test-filename": "off",
+    "vitest/no-importing-vitest-globals": "off",
+
     // suspicious
     "react/react-in-jsx-scope": "off",
     "typescript/no-unsafe-type-assertion": "off",
