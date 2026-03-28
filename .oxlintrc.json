@@ -44,6 +44,7 @@
 
     // Disabling rules
     // style
+    "eslint/capitalized-comments": "off",
     "eslint/func-style": "off",
     "eslint/id-length": "off",
     "eslint/init-declarations": "off",
