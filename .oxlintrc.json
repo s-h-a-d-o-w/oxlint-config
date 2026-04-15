@@ -43,6 +43,9 @@
     "typescript/no-misused-promises": ["error", { "checksVoidReturn": false }],
 
     // Disabling rules
+    // restriction
+    "vitest/require-test-timeout": "off",
+    
     // style
     "eslint/capitalized-comments": "off",
     "eslint/func-style": "off",
