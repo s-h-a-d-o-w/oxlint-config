@@ -43,6 +43,10 @@
     "typescript/no-misused-promises": ["error", { "checksVoidReturn": false }],
 
     // Disabling rules
+    // pedantic
+    "react/forbid-component-props": "off", // Might make sense on projects that don't use styled components pattern
+    "unicorn/no-negated-condition": "off",   
+
     // restriction
     "vitest/require-test-timeout": "off",
     
@@ -116,6 +120,9 @@
 
     "jest/no-conditional-in-test": "off",
     "jest/valid-title": "off",
+    "vitest/no-conditional-in-test": "off",    
+    "vitest/no-focused-tests": "off",    
+    "vitest/valid-title": "off",
 
     "jsx_a11y/no-autofocus": "off",
 
