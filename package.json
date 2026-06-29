@@ -15,5 +15,8 @@
     "lint",
     "linting"
   ],
-  "packageManager": "pnpm@10.31.0"
+  "packageManager": "pnpm@10.31.0",
+  "devDependencies": {
+    "oxfmt": "^0.56.0"
+  }
 }
