@@ -42,7 +42,18 @@
     // Configuring rules
     "typescript/consistent-type-definitions": ["error", "type"],
     "typescript/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "typescript/explicit-member-accessibility": [
+      "error",
+      { "accessibility": "no-public" }
+    ],
+    
+    // Worth reconsidering depending on the project
+    "eslint/no-underscore-dangle": "off",
+    "react/jsx-no-literals": "off",
 
+    // Hopefully, they'll improve it: https://github.com/oxc-project/oxc/discussions/20620
+    "oxc/no-async-endpoint-handlers": "off",
+    
     // Disabling rules
     // pedantic
     "react/forbid-component-props": "off", // Might make sense on projects that don't use styled components pattern
