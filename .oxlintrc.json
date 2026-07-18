@@ -69,6 +69,7 @@
     "eslint/func-style": "off",
     "eslint/id-length": "off",
     "eslint/init-declarations": "off",
+    "eslint/max-params": "off",
     "eslint/max-statements": "off",
     "eslint/new-cap": "off",
     "eslint/no-continue": "off",
