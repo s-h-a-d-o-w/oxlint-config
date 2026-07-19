@@ -16,6 +16,7 @@
     "format": "oxfmt",
     "lint": "oxlint",
     "typecheck": "tsc",
+    "prepare": "husky",
     "prepack": "del-cli dist && tsc -p tsconfig.prod.json",
     "prepublishOnly": "pnpm typecheck && oxlint && oxfmt --check"
   },
@@ -26,6 +27,8 @@
   },
   "devDependencies": {
     "del-cli": "^7.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.1.0",
     "oxfmt": "^0.56.0",
     "oxlint": "^1.74.0",
     "oxlint-tsgolint": "^0.25.0",

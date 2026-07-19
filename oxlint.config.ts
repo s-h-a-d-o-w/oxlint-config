@@ -1,1 +1,1 @@
-export { default } from "./src/lintNodeOnly.js";
+export { default } from "./src/lintNodeOnly.ts";

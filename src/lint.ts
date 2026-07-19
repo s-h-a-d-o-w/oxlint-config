@@ -1,5 +1,5 @@
 import { defineConfig } from "oxlint";
-import { lintBase } from "./lintBase.js";
+import { lintBase } from "./lintBase.ts";
 
 export default defineConfig({
   ...lintBase,
