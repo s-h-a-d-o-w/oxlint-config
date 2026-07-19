@@ -1,6 +1,6 @@
 {
   "name": "@s-h-a-d-o-w/oxlint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "My personal default oxlint and oxfmt configs.",
   "type": "module",
   "license": "MIT",
