@@ -1,1 +1,1 @@
-export { default } from "./src/oxlint.ts";
+export { default } from "./src/lintNodeOnly.ts";

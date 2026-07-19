@@ -1,12 +1,9 @@
-import { defineConfig } from "oxlint";
+import type { OxlintConfig } from "oxlint";
 
-export default defineConfig({
-  // NOT INHERITED
+export const lintBase = {
+  // NOT INHERITED ANYWAY, POINTLESS TO DECLARE
   // =========================================
-  env: {
-    node: true,
-    browser: true,
-  },
+  // env: {},
   // INHERITED BUT NOT MERGED
   // =========================================
   options: {
@@ -275,4 +272,4 @@ export default defineConfig({
       },
     },
   ],
-});
+} satisfies OxlintConfig;

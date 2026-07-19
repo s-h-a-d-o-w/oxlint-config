@@ -10,14 +10,16 @@ See this comment for more detail on `extends` behavior than the docs provide: ht
 
 ## Usage
 
-`npm install -D @s-h-a-d-o-w/oxlint-config`
+```bash
+npm install -D @s-h-a-d-o-w/oxlint-config
+```
 
 ### oxlint
 
-In your `oxlint.config.ts` (`env` HAS to be declared per-project!):
+In your `oxlint.config.ts` (`env` HAS to be declared per-project! If you use globals.):
 
-```
-import sharedConfig from "@s-h-a-d-o-w/oxlint-config/oxlint.js";
+```ts
+import sharedConfig from "@s-h-a-d-o-w/oxlint-config/lint.js";
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
@@ -31,22 +33,28 @@ export default defineConfig({
 
 But if you don't need globals, you can just do:
 
+```ts
+export { default } from "@s-h-a-d-o-w/oxlint-config/lint.js";
 ```
-export { default } from '@s-h-a-d-o-w/oxlint-config/oxlint.js';
+
+There's also a `lintNodeOnly` config, which uses the same rules but doesn't include browser-related plugins.
+
+```ts
+export { default } from "@s-h-a-d-o-w/oxlint-config/lintNodeOnly.js";
 ```
 
 ### oxfmt
 
 In your `oxfmt.config.ts`:
 
-```
-export { default } from '@s-h-a-d-o-w/oxlint-config/oxfmt.js';
+```ts
+export { default } from "@s-h-a-d-o-w/oxlint-config/fmt.js";
 ```
 
 For extending it - just treat it like any JS object, e.g.:
 
-```
-import baseConfig from "@s-h-a-d-o-w/oxlint-config/oxfmt.js";
+```ts
+import baseConfig from "@s-h-a-d-o-w/oxlint-config/fmt.js";
 import { defineConfig } from "oxfmt";
 
 export default defineConfig({
