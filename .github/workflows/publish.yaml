@@ -1,3 +1,5 @@
+name: Publish
+
 on:
   push:
     tags: ["*"]
@@ -6,12 +8,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      contents: read
+      id-token: write # Required for npm provenance
     steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          cache: true
       - uses: actions/setup-node@v7
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
-      - run: npm publish --provenance --access public
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
