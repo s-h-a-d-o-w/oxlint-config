@@ -12,10 +12,12 @@ See this comment for more detail on `extends` behavior than the docs provide: ht
 
 `npm install -D @s-h-a-d-o-w/oxlint-config`
 
+### oxlint
+
 In your `oxlint.config.ts` (`env` HAS to be declared per-project!):
 
 ```
-import sharedConfig from "@s-h-a-d-o-w/oxlint-config/oxlint.config";
+import sharedConfig from "@s-h-a-d-o-w/oxlint-config/oxlint.js";
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
@@ -27,16 +29,24 @@ export default defineConfig({
 });
 ```
 
+But if you don't need globals, you can just do:
+
+```
+export { default } from '@s-h-a-d-o-w/oxlint-config/oxlint.js';
+```
+
+### oxfmt
+
 In your `oxfmt.config.ts`:
 
 ```
-export { default } from '@s-h-a-d-o-w/oxlint-config/oxfmt.config';
+export { default } from '@s-h-a-d-o-w/oxlint-config/oxfmt.js';
 ```
 
 For extending it - just treat it like any JS object, e.g.:
 
 ```
-import baseConfig from "@s-h-a-d-o-w/oxlint-config/oxfmt.config";
+import baseConfig from "@s-h-a-d-o-w/oxlint-config/oxfmt.js";
 import { defineConfig } from "oxfmt";
 
 export default defineConfig({
