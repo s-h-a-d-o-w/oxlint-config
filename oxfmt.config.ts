@@ -1,1 +1,1 @@
-export { default } from "./src/fmt.ts";
+export { default } from "./src/fmt.js";

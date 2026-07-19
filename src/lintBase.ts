@@ -37,7 +37,6 @@ export const lintBase = {
   // =========================================
   rules: {
     // Configuring rules
-    "import/extensions": ["error", "ignorePackages"],
     "typescript/consistent-type-definitions": ["error", "type"],
     "typescript/no-misused-promises": ["error", { checksVoidReturn: false }],
     "typescript/no-unnecessary-condition": [
