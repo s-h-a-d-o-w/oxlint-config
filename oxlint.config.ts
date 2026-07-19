@@ -1,29 +1,30 @@
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
+import { defineConfig } from "oxlint";
+
+export default defineConfig({
   // NOT INHERITED
   // =========================================
-  "env": {
-    "node": true,
-    "browser": true
+  env: {
+    node: true,
+    browser: true,
   },
   // INHERITED BUT NOT MERGED
   // =========================================
-  "options": {
-    "typeAware": true,
-    "reportUnusedDisableDirectives": "error"
+  options: {
+    typeAware: true,
+    reportUnusedDisableDirectives: "error",
   },
   // See: https://oxc.rs/docs/guide/usage/linter/rules.html
-  "categories": {
-    "correctness": "error",
-    "nursery": "error",
-    "pedantic": "error",
-    "perf": "error",
-    "restriction": "error",
-    "suspicious": "error",
-    "style": "error"
+  categories: {
+    correctness: "error",
+    nursery: "error",
+    pedantic: "error",
+    perf: "error",
+    restriction: "error",
+    suspicious: "error",
+    style: "error",
   },
   // See: https://oxc.rs/docs/guide/usage/linter/plugins.html#supported-plugins
-  "plugins": [
+  plugins: [
     "eslint",
     "typescript",
     "unicorn",
@@ -34,21 +35,21 @@
     "import",
     "jsx-a11y",
     "promise",
-    "vitest"
   ],
   // MERGED
   // =========================================
-  "rules": {
+  rules: {
     // Configuring rules
+    "import/extensions": ["error", "ignorePackages"],
     "typescript/consistent-type-definitions": ["error", "type"],
-    "typescript/no-misused-promises": ["error", { "checksVoidReturn": false }],
+    "typescript/no-misused-promises": ["error", { checksVoidReturn: false }],
     "typescript/no-unnecessary-condition": [
       "error",
-      { "allowConstantLoopConditions": true }
-    ],    
+      { allowConstantLoopConditions: true },
+    ],
     "typescript/explicit-member-accessibility": [
       "error",
-      { "accessibility": "no-public" }
+      { accessibility: "no-public" },
     ],
 
     // Worth reconsidering depending on the project
@@ -77,6 +78,7 @@
     "eslint/no-magic-numbers": "off",
     "eslint/no-nested-ternary": "off",
     "eslint/no-ternary": "off",
+    "eslint/prefer-arrow-callback": "off",
     "eslint/prefer-template": "off",
     "eslint/sort-imports": "off",
     "eslint/sort-keys": "off",
@@ -161,13 +163,13 @@
     "unicorn/no-process-exit": "off",
     "unicorn/no-useless-undefined": "off",
     "unicorn/prefer-import-meta-properties": "off",
-    "unicorn/prefer-module": "off"
+    "unicorn/prefer-module": "off",
   },
-  "overrides": [
+  overrides: [
     {
-      "files": ["**/*.test.ts", "**/*.test.tsx"],
-      "plugins": ["vitest"],
-      "rules": {
+      files: ["**/*.test.ts", "**/*.test.tsx"],
+      plugins: ["vitest"],
+      rules: {
         // restriction
         "vitest/require-test-timeout": "off",
 
@@ -183,12 +185,12 @@
         "vitest/no-focused-tests": "off",
         "vitest/prefer-expect-assertions": "off",
         "vitest/valid-title": "off",
-        "vitest/no-hooks": "off"
-      }
+        "vitest/no-hooks": "off",
+      },
     },
     {
-      "files": ["**/*.mjs", "**/*.cjs", "**/*.js"],
-      "rules": {
+      files: ["**/*.mjs", "**/*.cjs", "**/*.js"],
+      rules: {
         "typescript/await-thenable": "off",
         "typescript/ban-ts-comment": "off",
         "typescript/ban-types": "off",
@@ -269,8 +271,8 @@
         "typescript/switch-exhaustiveness-check": "off",
         "typescript/triple-slash-reference": "off",
         "typescript/unbound-method": "off",
-        "typescript/use-unknown-in-catch-callback-variable": "off"
-      }
-    }
-  ]
-}
+        "typescript/use-unknown-in-catch-callback-variable": "off",
+      },
+    },
+  ],
+});

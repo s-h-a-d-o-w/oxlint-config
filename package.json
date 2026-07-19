@@ -1,22 +1,27 @@
 {
   "name": "@s-h-a-d-o-w/oxlint-config",
   "version": "0.0.1",
-  "description": "",
+  "description": "My personal default oxlint and oxfmt configs.",
+  "type": "module",
   "license": "MIT",
   "author": "Andreas Opferkuch <andreas.opferkuch@gmail.com>",
   "repository": "s-h-a-d-o-w/oxlint-config",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "oxfmt",
+    "lint": "oxlint"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.25.0",
+    "typescript": "^7.0.2"
   },
   "keywords": [
     "config",
     "defaults",
-    "oxlint",
     "lint",
-    "linting"
+    "linting",
+    "oxlint"
   ],
-  "packageManager": "pnpm@10.31.0",
-  "devDependencies": {
-    "oxfmt": "^0.56.0"
-  }
+  "packageManager": "pnpm@11.15.0+sha512.266f8957a30d2be6e9468e5e66bcdedd35a794175f71b067ba8504d686cce1d0c0f429b33c323c3c569ad4891e667574a49ff71d1b89a22cc66f13c65818c578"
 }
