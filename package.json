@@ -7,16 +7,17 @@
   "author": "Andreas Opferkuch <andreas.opferkuch@gmail.com>",
   "repository": "s-h-a-d-o-w/oxlint-config",
   "exports": {
-    "./*": "./*"
+    "./*": "./dist/*"
   },
   "files": [
-    "oxlint.config.ts",
-    "oxfmt.config.ts"
+    "dist"
   ],
   "scripts": {
     "format": "oxfmt",
     "lint": "oxlint",
-    "prepublishOnly": "oxlint && oxfmt --check"
+    "typecheck": "tsc",
+    "prepack": "del-cli dist && tsc -p tsconfig.prod.json",
+    "prepublishOnly": "pnpm typecheck && oxlint && oxfmt --check"
   },
   "peerDependencies": {
     "oxfmt": "*",
@@ -24,6 +25,7 @@
     "oxlint-tsgolint": "*"
   },
   "devDependencies": {
+    "del-cli": "^7.0.0",
     "oxfmt": "^0.56.0",
     "oxlint": "^1.74.0",
     "oxlint-tsgolint": "^0.25.0",
