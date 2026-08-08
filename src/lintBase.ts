@@ -95,6 +95,7 @@ export const lintBase = {
     "unicorn/filename-case": "off",
     "unicorn/no-await-expression-member": "off",
     "unicorn/no-nested-ternary": "off",
+    "unicorn/number-literal-case": "off", // Conflicts with oxfmt
     "unicorn/prefer-global-this": "off",
     "unicorn/prefer-ternary": "off",
 
