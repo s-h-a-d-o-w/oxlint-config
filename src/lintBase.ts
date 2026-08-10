@@ -173,7 +173,7 @@ export const lintBase = {
         // style
         "vitest/consistent-test-filename": "off",
         "vitest/no-importing-vitest-globals": "off",
-        "vitest/prefer-called-times": "off" // Resolves conflict with https://oxc.rs/docs/guide/usage/linter/rules/vitest/prefer-called-once.html
+        "vitest/prefer-called-times": "off", // Resolves conflict with https://oxc.rs/docs/guide/usage/linter/rules/vitest/prefer-called-once.html
         "vitest/prefer-to-be-truthy": "off",
         "vitest/require-hook": "off", // Lots of false positives
 
