@@ -74,6 +74,7 @@ export const lintBase = {
     "no-magic-numbers": "off",
     "no-nested-ternary": "off",
     "no-ternary": "off",
+    "one-var": "off",
     "prefer-arrow-callback": "off",
     "prefer-template": "off",
     "sort-imports": "off",
