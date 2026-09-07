@@ -47,6 +47,14 @@ export const lintBase = {
       "error",
       { accessibility: "no-public" },
     ],
+    "unicorn/numeric-separators-style": [
+      "error",
+      {
+        number: {
+          minimumDigits: 0, // default is 5 for some reason
+        },
+      },
+    ],
 
     // Worth reconsidering depending on the project
     "max-depth": "off",
