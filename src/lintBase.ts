@@ -20,19 +20,6 @@ export const lintBase = {
     suspicious: "error",
     style: "error",
   },
-  // See: https://oxc.rs/docs/guide/usage/linter/plugins.html#supported-plugins
-  plugins: [
-    "eslint",
-    "typescript",
-    "unicorn",
-    "react",
-    "react-perf",
-    "nextjs",
-    "oxc",
-    "import",
-    "jsx-a11y",
-    "promise",
-  ],
   // MERGED
   // =========================================
   rules: {
@@ -183,6 +170,7 @@ export const lintBase = {
         "vitest/consistent-test-filename": "off",
         "vitest/no-importing-vitest-globals": "off",
         "vitest/prefer-called-times": "off", // Resolves conflict with https://oxc.rs/docs/guide/usage/linter/rules/vitest/prefer-called-once.html
+        "vitest/prefer-to-be-falsy": "off",
         "vitest/prefer-to-be-truthy": "off",
         "vitest/require-hook": "off", // Lots of false positives
 
