@@ -72,6 +72,7 @@ export const lintBase = {
     "one-var": "off",
     "prefer-arrow-callback": "off",
     "prefer-template": "off",
+    "promise/param-names": "off",
     "sort-imports": "off",
     "sort-keys": "off",
     "import/consistent-type-specifier-style": "off",
