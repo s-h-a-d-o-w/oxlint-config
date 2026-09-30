@@ -58,6 +58,7 @@ export const lintBase = {
     "unicorn/prefer-event-target": "off",
 
     // style
+    "arrow-body-style": "off",
     "capitalized-comments": "off",
     "func-style": "off",
     "id-length": "off",
