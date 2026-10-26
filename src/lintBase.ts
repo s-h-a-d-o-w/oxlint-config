@@ -88,7 +88,6 @@ export const lintBase = {
     "promise/prefer-await-to-then": "off",
     "react/jsx-max-depth": "off",
     "react/jsx-props-no-spreading": "off",
-    "typescript/consistent-type-imports": "off",
     "unicorn/error-message": "off",
     "unicorn/filename-case": "off",
     "unicorn/no-await-expression-member": "off",
