@@ -178,7 +178,6 @@ export const lintBase = {
         // more severe levels
         "vitest/max-expects": "off",
         "vitest/no-conditional-in-test": "off",
-        "vitest/no-focused-tests": "off",
         "vitest/prefer-expect-assertions": "off",
         "vitest/valid-title": "off",
         "vitest/no-hooks": "off",
