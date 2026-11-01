@@ -25,6 +25,12 @@ export const lintBase = {
   rules: {
     // Configuring rules
     "typescript/consistent-type-definitions": ["error", "type"],
+    "typescript/consistent-type-imports": [
+      "error",
+      {
+        disallowTypeAnnotations: false,
+      },
+    ],
     "typescript/no-misused-promises": ["error", { checksVoidReturn: false }],
     "typescript/no-unnecessary-condition": [
       "error",
