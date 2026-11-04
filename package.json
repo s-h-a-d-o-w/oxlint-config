@@ -5,10 +5,10 @@
   "type": "module",
   "license": "MIT",
   "author": "Andreas Opferkuch <andreas.opferkuch@gmail.com>",
-  "homepage": "https://github.com/s-h-a-d-o-w/tree-sitter-wasms#readme",
+  "homepage": "https://github.com/s-h-a-d-o-w/oxlint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s-h-a-d-o-w/tree-sitter-wasms.git"
+    "url": "git+https://github.com/s-h-a-d-o-w/oxlint-config.git"
   },
   "exports": {
     "./*": "./dist/*"
