@@ -1,11 +1,15 @@
 {
   "name": "@s-h-a-d-o-w/oxlint-config",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "description": "My personal default oxlint and oxfmt configs.",
   "type": "module",
   "license": "MIT",
   "author": "Andreas Opferkuch <andreas.opferkuch@gmail.com>",
-  "repository": "s-h-a-d-o-w/oxlint-config",
+  "homepage": "https://github.com/s-h-a-d-o-w/tree-sitter-wasms#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-h-a-d-o-w/tree-sitter-wasms.git"
+  },
   "exports": {
     "./*": "./dist/*"
   },
